@@ -17,4 +17,33 @@ If you want to start working on your project right away, you might want to try t
 cd calculator2/
 dfx help
 dfx config --help
+dfx build
+dfx canister install --all 
+# or
+dfx canister install --all -m reinstall
+open 'http://127.0.0.1:8000/candid?canisterId=75hes-oqbaa-aaaaa-aaaaa-aaaaa-aaaaa-aaaaa-q'
+```
+
+## Notes
+
+```reason
+~/Downloads/MOKOTO/calculator2 master*
+❯ dfx build
+Building canisters...
+Building frontend...
+
+~/Downloads/MOKOTO/calculator2 master*
+❯ dfx canister install --all
+Installing code for canister calculator2, with canister_id 75hes-oqbaa-aaaaa-aaaaa-aaaaa-aaaaa-aaaaa-q
+Replica error (code 5): IC0306: Canister 75hes-oqbaa-aaaaa-aaaaa-aaaaa-aaaaa-aaaaa-q cannot be installed because the canister is not empty. Try installing with mode='reinstall' instead.
+
+~/Downloads/MOKOTO/calculator2 master*
+❯ dfx canister install --all -m reinstall
+Installing code for canister calculator2, with canister_id 75hes-oqbaa-aaaaa-aaaaa-aaaaa-aaaaa-aaaaa-q
+Installing code for canister calculator2_assets, with canister_id cxeji-wacaa-aaaaa-aaaaa-aaaaa-aaaaa-aaaaa-q
+
+<!-- opens candid ui -->
+~/Downloads/MOKOTO/calculator2 master*
+❯ open 'http://127.0.0.1:8000/candid?canisterId=75hes-oqbaa-aaaaa-aaaaa-aaaaa-aaaaa-aaaaa-q'
+
 ```
