@@ -1,0 +1,40 @@
+{
+  "canisters": {
+    "calculator2": {
+      "main": "src/calculator2/main.mo",
+      "type": "motoko"
+    },
+    "calculator2_assets": {
+      "dependencies": [
+        "calculator2"
+      ],
+      "frontend": {
+        "entrypoint": "src/calculator2_assets/public/index.js"
+      },
+      "source": [
+        "src/calculator2_assets/assets",
+        "dist/calculator2_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.6.6",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "tungsten": {
+      "providers": [
+        "https://gw.dfinity.network"
+      ],
+      "type": "persistent"
+    }
+  },
+  "version": 1
+}
